@@ -18,4 +18,20 @@ values('Harsha','Verma','645 Catherine Street','Bangalore','Karnataka',243001,98
 ('Rutuja','Kolte','836 Heritage Rd','Mumbai','Maharashtra',134002,98402000,'Rujula@gmail.com'),
 ('Anita','Yadav','19 Augusta Avenue','Lucknow','Uttar Pradesh',113201,87210505053,'anita@gmail.com');
 
-select * from Address_Book1_Table;  
+select * from Address_Book1_Table;
+
+------ UC 4: Ability to Edit Contact Person Based on their Name ------
+--Edit Email based on Name--
+Update Address_Book1_Table
+set Email='AnitaYadav@gmail.com'
+where FirstName='Anita'
+
+--Edit Address based on Name--
+Update Address_Book1_Table
+set Address='836 Heritage Resort Road'
+where FirstName='Rutuja' and SecondName='Kolte';
+
+------ UC 5: Ability to Delete Contact Person Based on their Name ------
+delete 
+from Address_Book1_Table
+where FirstName='Anita' and SecondName='Yadav'
