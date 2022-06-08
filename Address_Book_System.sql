@@ -76,3 +76,18 @@ update Address_Book1_Table
 set AddressBook1Name='Manager',Type='Profession'
 where FirstName='Meena'
 select * from Address_Book1_Table;
+
+------ UC 10: Ability to get number of contact persons by Type------
+select Count(*) as NumberOfContacts,Type
+from Address_Book1_Table
+Group by Type
+
+--Update values for Type=Family--
+update Address_Book_Table
+set AddressBookName='Mom',Type='Family'
+where FirstName='Pramela'
+
+--Update values for Type=Profession--
+update Address_Book1_Table
+set AddressBook1Name='Manager',Type='Profession'
+where FirstName='Meena'
